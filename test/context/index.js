@@ -1,7 +1,9 @@
-import { resolve } from 'path'
-import { debuglog } from 'util'
-
-const LOG = debuglog('@wrote/clone')
+import { resolve, join } from 'path'
+import readDirStructure from '@wrote/read-dir-structure'
+import ensurePath from '@wrote/ensure-path'
+import rm from '@wrote/rm'
+import { collect } from 'catchment'
+import { createReadStream } from 'fs'
 
 const FIXTURE = resolve(__dirname, '../fixture')
 
@@ -10,24 +12,24 @@ const FIXTURE = resolve(__dirname, '../fixture')
  */
 export default class Context {
   async _init() {
-    LOG('init context')
+    await ensurePath(join(this.TEMP, 't.file'))
   }
-  /**
-   * Example method.
-   */
-  example() {
-    return 'OK'
+  async readFixtureStructure() {
+    const res = await readDirStructure(this.DIR)
+    return res
   }
-  /**
-   * Path to the fixture file.
-   */
-  get FIXTURE() {
-    return resolve(FIXTURE, 'test.txt')
+  get TEMP() {
+    return 'test/temp'
   }
-  get SNAPSHOT_DIR() {
-    return resolve(__dirname, '../snapshot')
+  async read(path) {
+    const rs = createReadStream(path)
+    const res = await collect(rs)
+    return res
+  }
+  get DIR() {
+    return resolve(FIXTURE, 'dir')
   }
   async _destroy() {
-    LOG('destroy context')
+    await rm(this.TEMP)
   }
 }
