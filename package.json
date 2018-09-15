@@ -9,8 +9,6 @@
     "spec": "yarn t test/spec",
     "mask": "yarn t test/mask",
     "test-build": "ALAMODE_ENV=test-build yarn test",
-    "test-all": "yarn-s test test-build",
-    "test-watch": "yarn test -w",
     "lint": "eslint .",
     "doc": "NODE_DEBUG=doc doc documentary -o README.md",
     "b": "alamode src -o build",
@@ -29,7 +27,12 @@
   },
   "keywords": [
     "clone",
-    "wrote"
+    "wrote",
+    "file",
+    "fs",
+    "filesystem",
+    "copy",
+    "cp"
   ],
   "author": "Anton <anton@adc.sh>",
   "license": "MIT",
