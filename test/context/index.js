@@ -1,11 +1,7 @@
-import { resolve, join } from 'path'
+import { join } from 'path'
 import readDirStructure from '@wrote/read-dir-structure'
-import ensurePath from '@wrote/ensure-path'
-import rm from '@wrote/rm'
-import { collect } from 'catchment'
-import { createReadStream } from 'fs'
 
-const FIXTURE = resolve(__dirname, '../fixture')
+const FIXTURE = 'test/fixture'
 
 /**
  * A testing context for the package.
@@ -16,6 +12,6 @@ export default class Context {
     return res
   }
   get DIR() {
-    return resolve(FIXTURE, 'dir')
+    return join(FIXTURE, 'dir')
   }
 }
