@@ -1,7 +1,7 @@
 
 ## TODO
 
-- [ ] Add a new item to the todo list.
+- [ ] Clone symbolic links and other entities.
 
 ## Copyright
 

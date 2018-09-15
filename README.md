@@ -1,8 +1,8 @@
 # @wrote/clone
 
-[![npm version](https://badge.fury.io/js/@wrote/clone.svg)](https://npmjs.org/package/@wrote/clone)
+[![npm version](https://badge.fury.io/js/%40wrote%2Fclone.svg)](https://npmjs.org/package/@wrote/clone)
 
-`@wrote/clone` is A package to clone a file or directory.
+`@wrote/clone` is a package to clone a file or directory.
 
 ```sh
 yarn add -E @wrote/clone
@@ -12,7 +12,7 @@ yarn add -E @wrote/clone
 
 - [Table Of Contents](#table-of-contents)
 - [API](#api)
-  * [`clone(arg1: string, arg2?: boolean)`](#mynewpackagearg1-stringarg2-boolean-void)
+- [`clone(path: string, to: string)`](#clonepath-stringto-string-void)
 - [TODO](#todo)
 - [Copyright](#copyright)
 
@@ -24,22 +24,62 @@ The package is available by importing its default function:
 import clone from '@wrote/clone'
 ```
 
-### `clone(`<br/>&nbsp;&nbsp;`arg1: string,`<br/>&nbsp;&nbsp;`arg2?: boolean,`<br/>`): void`
+## `clone(`<br/>&nbsp;&nbsp;`path: string,`<br/>&nbsp;&nbsp;`to: string,`<br/>`): void`
 
-Call this function to get the result you want.
+Clones a file or directory to the specified directory. The `to` path should be the path of the folder which will contain the cloned entity and not the path to the new object on the filesystem.
 
 ```js
 /* yarn example/ */
 import clone from '@wrote/clone'
+import readDirStructure from '@wrote/read-dir-structure'
+
+const printContent = async (path) => {
+  const ds = await readDirStructure(path)
+  console.log(JSON.stringify(ds, null, 2))
+}
 
 (async () => {
-  await clone()
+  // 0. CHECK what is being cloned.
+  console.log('Directory being cloned:')
+  await printContent('example/dir')
+
+  // 1. CLONE the directory.
+  await clone('example/dir', 'example/temp')
+
+  // 1. VALIDATE that the directory was cloned.
+  console.log('Temp directory contents:')
+  await printContent('example/temp')
 })()
 ```
 
+```
+Directory being cloned:
+{
+  "content": {
+    "example.md": {
+      "type": "File"
+    }
+  },
+  "type": "Directory"
+}
+Temp directory contents:
+{
+  "content": {
+    "dir": {
+      "content": {
+        "example.md": {
+          "type": "File"
+        }
+      },
+      "type": "Directory"
+    }
+  },
+  "type": "Directory"
+}
+```
 ## TODO
 
-- [ ] Add a new item to the todo list.
+- [ ] Clone symbolic links and other entities.
 
 ## Copyright
 
