@@ -6,14 +6,16 @@ import makePromise from 'makepromise'
 import { lstat } from 'fs'
 import Context from '../context'
 import clone from '../../src'
+import TempContext from 'temp-context'
 
 const ts = makeTestSuite('test/result', {
   /**
    * Get results.
    * @param {string} input
    * @param {Context} context
+   * @param {TempContext} tempContext
    */
-  async getResults(input, { readFixtureStructure, TEMP, read }) {
+  async getResults(input, { readFixtureStructure }, { TEMP, read }) {
     const s = await makePromise(lstat, input)
     await clone(input, TEMP)
     const p = basename(input)
@@ -36,7 +38,7 @@ const ts = makeTestSuite('test/result', {
       args: input,
     }
   },
-  context: Context,
+  context: [Context, TempContext],
 })
 
 export default ts
