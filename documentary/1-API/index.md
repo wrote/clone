@@ -1,4 +1,3 @@
-
 ## API
 
 The package is available by importing its default function:
@@ -6,6 +5,8 @@ The package is available by importing its default function:
 ```js
 import clone from '@wrote/clone'
 ```
+
+%~%
 
 ```## clone
 [
@@ -19,3 +20,5 @@ Clones a file or directory to the specified directory. The `to` path should be t
 %EXAMPLE: example/example.js, ../src => @wrote/clone%
 
 %FORK example example/example%
+
+%~%

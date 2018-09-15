@@ -8,6 +8,8 @@
 yarn add -E @wrote/clone
 ```
 
+<p align="center"><a href="#table-of-contents"><img src=".documentary/section-breaks/0.svg"></a></p>
+
 ## Table Of Contents
 
 - [Table Of Contents](#table-of-contents)
@@ -16,6 +18,8 @@ yarn add -E @wrote/clone
 - [TODO](#todo)
 - [Copyright](#copyright)
 
+<p align="center"><a href="#table-of-contents"><img src=".documentary/section-breaks/1.svg"></a></p>
+
 ## API
 
 The package is available by importing its default function:
@@ -23,6 +27,8 @@ The package is available by importing its default function:
 ```js
 import clone from '@wrote/clone'
 ```
+
+<p align="center"><a href="#table-of-contents"><img src=".documentary/section-breaks/2.svg"></a></p>
 
 ## `clone(`<br/>&nbsp;&nbsp;`path: string,`<br/>&nbsp;&nbsp;`to: string,`<br/>`): void`
 
@@ -77,6 +83,9 @@ Temp directory contents:
   "type": "Directory"
 }
 ```
+
+<p align="center"><a href="#table-of-contents"><img src=".documentary/section-breaks/3.svg"></a></p>
+
 ## TODO
 
 - [ ] Clone symbolic links and other entities.
@@ -86,3 +95,5 @@ Temp directory contents:
 (c) [Wrote][1] 2018
 
 [1]: https://wrote.cc
+
+<p align="center"><a href="#table-of-contents"><img src=".documentary/section-breaks/-1.svg"></a></p>
