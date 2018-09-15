@@ -26,6 +26,12 @@
   dependencies:
     makepromise "2.0.0"
 
+"@wrote/ensure-path@1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@wrote/ensure-path/-/ensure-path-1.0.3.tgz#7faeff4ebb5b3972b745e0cc85f3e06cbca51d51"
+  dependencies:
+    makepromise "3.0.1"
+
 "@wrote/read-dir-structure@1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@wrote/read-dir-structure/-/read-dir-structure-1.0.0.tgz#11b827934b493b2f730a32a91551eadacd41b936"
@@ -271,9 +277,9 @@ yarn-s@1.1.0:
   dependencies:
     spawncommand "1.1.0"
 
-zoroaster@3.1.2:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/zoroaster/-/zoroaster-3.1.2.tgz#b5e81212782b3f83924f1ea465c064427d3b4e86"
+zoroaster@3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/zoroaster/-/zoroaster-3.2.0.tgz#679f61443d6253d595c45cab7ac4db98cd69511e"
   dependencies:
     "@artdeco/clean-stack" "1.0.0"
     alamode "1.4.0"
