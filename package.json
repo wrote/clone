@@ -1,6 +1,6 @@
 {
   "name": "@wrote/clone",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A package to clone a file or directory.",
   "main": "build",
   "scripts": {
