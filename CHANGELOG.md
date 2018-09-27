@@ -1,3 +1,9 @@
+## 27 September 2018
+
+### 1.1.0
+
+- [feature] Clone symlinks.
+
 ## 15 September 2018
 
 ### 1.0.1
