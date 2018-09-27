@@ -41,14 +41,14 @@
   },
   "homepage": "https://github.com/wrote/clone#readme",
   "devDependencies": {
-    "@wrote/rm": "1.0.0",
-    "alamode": "1.4.0",
+    "@wrote/rm": "1.1.0",
+    "alamode": "1.5.1",
     "catchment": "3.1.1",
-    "documentary": "1.15.2",
+    "documentary": "1.20.1",
     "eslint-config-artdeco": "1.0.1",
-    "temp-context": "1.0.0",
+    "temp-context": "1.2.0",
     "yarn-s": "1.1.0",
-    "zoroaster": "3.2.0"
+    "zoroaster": "3.5.1"
   },
   "dependencies": {
     "@wrote/ensure-path": "1.0.3",
