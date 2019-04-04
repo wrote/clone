@@ -1,3 +1,9 @@
+## 4 April 2019
+
+### [1.1.1](https://github.com/wrote/clone/compare/v1.1.0...v1.1.1)
+
+- [deps] Unfix dependencies.
+
 ## 27 September 2018
 
 ### 1.1.0
