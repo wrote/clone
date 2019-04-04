@@ -1,5 +1,5 @@
 import { ok, equal, deepEqual } from 'zoroaster/assert'
-import { makeTestSuite } from 'zoroaster'
+import makeTestSuite from '@zoroaster/mask'
 import readDirStructure from '@wrote/read-dir-structure'
 import { basename, join } from 'path'
 import makePromise from 'makepromise'
@@ -15,7 +15,7 @@ const ts = makeTestSuite('test/result', {
    * @param {Context} context
    * @param {TempContext} tempContext
    */
-  async getResults(input, { readFixtureStructure }, { TEMP, read }) {
+  async getResults(input, { readFixtureStructure }, { TEMP, readGlobal }) {
     const s = await makePromise(lstat, input)
     await clone(input, TEMP)
     const p = basename(input)
@@ -26,8 +26,8 @@ const ts = makeTestSuite('test/result', {
       const res = await readDirStructure(j)
       deepEqual(res, expected)
     } else if (s.isFile()) {
-      const expected = await read(input)
-      const res = await read(j)
+      const expected = await readGlobal(input)
+      const res = await readGlobal(j)
       ok(res)
       equal(res, expected)
     }

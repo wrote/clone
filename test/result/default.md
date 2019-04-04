@@ -1,14 +1,14 @@
-// clones a directory
+## clones a directory
 test/fixture/dir
 
 /**/
 
-// clones a file
+## clones a file
 test/fixture/dir/1.md
 
 /**/
 
-// throws an error when file does not exist
+## throws an error when file does not exist
 test/fixture/dir/does-not-exist.txt
 
 /* error */

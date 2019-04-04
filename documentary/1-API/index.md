@@ -17,8 +17,8 @@ import clone from '@wrote/clone'
 
 Clones a file or directory to the specified directory. The `to` path should be the path of the folder which will contain the cloned entity and not the path to the new object on the filesystem.
 
-%EXAMPLE: example/example.js, ../src => @wrote/clone%
+%EXAMPLE: example, ../src => @wrote/clone%
 
-%FORK example example/example%
+%FORK example%
 
 %~%
