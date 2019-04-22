@@ -1,3 +1,10 @@
+## 22 April 2019
+
+### [1.2.0](https://github.com/wrote/clone/compare/v1.1.1...v1.2.0)
+
+- [package] Export `src/index.js` in the _module_ field.
+- [deps] Update dependencies.
+
 ## 4 April 2019
 
 ### [1.1.1](https://github.com/wrote/clone/compare/v1.1.0...v1.1.1)
